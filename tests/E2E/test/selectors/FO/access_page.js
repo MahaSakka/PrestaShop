@@ -3,7 +3,7 @@ module.exports = {
     sign_in_button: '//*[@id="_desktop_user_info"]/div/a',
     login_input: '//*[@id="login-form"]/section/div[1]/div[1]/input',
     password_inputFO: '//*[@id="login-form"]/section/div[2]/div[1]/div/input',
-    login_button: '//*[@id="login-form"]/footer/button',
+    login_button: '//*[@id="submit-login"]',
     sign_out_button: '//*[@id="_desktop_user_info"]/div/a[1]',
     logo_home_page: '//*[@id="_desktop_logo"]//a',
     product_list_button: '//*[@id="content"]/section/a',
@@ -47,6 +47,7 @@ module.exports = {
     display_top_link_widget:'//*[@id="header"]/div[2]/div/div[1]/div[2]/div[3]/div//p[contains(text(),"%DISPLAYTOP")]',
     second_display_top_link_widget:'//*[@id="header"]/div[2]/div/div[1]/div[2]/div[3]/div/div[2]/p',
     not_found_error_message: '//*[@id="main"]//h1',
-    product_name: '//*[@id="js-product-list"]//h2//a[contains(text(),"%PAGENAME")]'
+    product_name: '//*[@id="js-product-list"]//h2//a[contains(text(),"%PAGENAME")]',
+    authenticate_failed :'//*[@id="content"]//ul/li[@class="alert alert-danger"]',
   }
 };
