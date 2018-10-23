@@ -26,6 +26,15 @@ module.exports = {
     bulk_actions_delete_button: '//*[@id="form-customer"]//div[contains(@class,"bulk-actions")]//a[contains(@onclick,"submitBulkdeletecustomer")]',
     empty_list_icon: '//*[@id="table-customer"]//div[contains(@class,"list-empty-msg")]',
     customer_link: '//*[@id="table-address"]//td[contains(text(),"%ID")]',
-    Partner_offers: '//*[@id="fieldset_0"]//label[contains(@for,"optin_on")]'
+    Partner_offers: '//*[@id="fieldset_0"]//label[contains(@for,"optin_on")]',
+    edit_address_button: '//*[@id="table-address"]//a[contains(@class, "edit")]',
+    company_input: '//*[@id="company"]',
+    vat_number_input: '//*[@id="vat_number"]',
+    address_input: '//*[@id="address1"]',
+    address2_input: '//*[@id="address2"]',
+    zip_postal_code_input: '//*[@id="postcode"]',
+    city_input: '//*[@id="city"]',
+    country_input: '//select[@name="id_country"]//option[contains(text(),"%ID")]',
+    phone_input:'//*[@id="phone"]'
   }
 };

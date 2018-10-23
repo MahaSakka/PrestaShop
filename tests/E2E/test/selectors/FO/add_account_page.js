@@ -16,13 +16,13 @@ module.exports = {
     gender_radio_button: '(//*[@id="customer-form"]//input[contains(@name,"id_gender")])[2]',
     account_link: '//*[@id="_desktop_user_info"]//a[@class="account"]',
     add_first_address: '#address-link',
-    adr_address: '//*[@id="content"]//input[@name="address1"]',
-    adr_postcode: '//*[@id="content"]//input[@name="postcode"]',
-    adr_city: '//*[@id="content"]//input[@name="city"]',
+    adr_address: '//*[@id="content"]//input[name="address1"]',
+    adr_postcode: '//*[@id="content"]//input[name="postcode"]',
+    adr_city: '//*[@id="content"]//input[name="city"]',
     adr_save: '//*[@id="content"]//footer/button',
     success_alert: '[data-alert="success"]',
     adr_update: '[data-link-action="edit-address"]',
-    //------------------ connect with existing account from checkout ----------------//
+    //------------------ connect with existing account from checkout ---------------//
     sign_tab: '//*[@id="checkout-personal-information-step"]//a[contains(text(), "Sign in")]',
     signin_email_input: '//*[@id="login-form"]//input[@name="email"]',
     signin_password_input: '//*[@id="login-form"]//input[@name="password"]',
@@ -43,5 +43,18 @@ module.exports = {
     save_notification: '//*[@id="notifications"]//li',
     danger_alert: '//*[@id="customer-form"]//li[contains(@class,"alert-danger")]',
     add_new_address: '//*[@id="checkout-addresses-step"]//p[@class="add-address"]/a'
+  },
+  addressPage: {
+    firstname_input: '//input[@name="firstname"]',
+    lastname_input: '//input[@name="lastname"]',
+    adr_address: 'input[name="address1"]',
+    adr_postcode: 'input[name="postcode"]',
+    adr_city: 'input[name="city"]',
+    create_new_address_button:'//*[@id="content"]//a[@data-link-action="add-address"]',
+    choose_country_input: '//*[@id="content"]//select[@class="form-control form-control-select js-country"]',
+    company_input: 'input[name="company"]',
+    vat_number_input: 'input[name="vat_number"]',
+    address_Complement_input: 'input[name="address2"]',
+    phone_input: 'input[name="phone"]'
   }
 };

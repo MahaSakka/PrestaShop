@@ -592,6 +592,17 @@ class CommonClient {
     }
   }
 
+  checkElementValidation(selector, validationText) {
+    return this.client
+      .pause(3000)
+      .execute(function (selector) {
+        let message = document.querySelector(selector).validationMessage;
+        return message;
+      }, selector)
+      .then((message) => {
+        expect(message.value).to.be.equal(validationText);
+      });
+  }
 }
 
 module.exports = CommonClient;

@@ -29,7 +29,7 @@ module.exports = {
       Customers: {
         customers_menu: '//*[@id="subtab-AdminParentCustomer"]/a',
         customers_submenu: '#subtab-AdminCustomers',
-        addresses_submenu: '#subtab-AdminAddresses'
+        addresses_submenu: '#subtab-AdminAddresses',
       },
       CustomerService: {
         customer_service_menu: '//*[@id="subtab-AdminParentCustomerThreads"]/a',
@@ -79,6 +79,7 @@ module.exports = {
         locations_submenu: '#subtab-AdminParentCountries',
         countries_tab: '//*[@id="subtab-AdminCountries"]',
         states_tab: '//*[@id="subtab-AdminStates"]',
+        zones_tab: '//*[@id="subtab-AdminZones"]',
         taxes_submenu: '#subtab-AdminParentTaxes',
         taxe_rules_tab: '#subtab-AdminTaxRulesGroup',
         translations_submenu: '#subtab-AdminTranslations'
