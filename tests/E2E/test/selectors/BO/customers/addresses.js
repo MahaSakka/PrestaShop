@@ -30,6 +30,9 @@ module.exports = {
     submit_field: '//button[contains(@name,"submitFields")]',
     select_all_field_name: '//input[contains(@name,"checkme")]',
     address_id: '//*[@id="table-address"]//td[2]',
-    empty_class: '//*[@id="table-address"]//div[contains(@class,"list-empty-msg")]'
+    empty_class: '//*[@id="table-address"]//div[contains(@class,"list-empty-msg")]',
+    alert_success :'//*[@id="content"]//div[@class="alert alert-success"]',
+    search_button: '//*[@id="submitFilterButtonaddress"]',
+    optional_text: '//*[@id="content"]//div[%ID]/div[@class="col-md-3 form-control-comment"]'
   }
 };

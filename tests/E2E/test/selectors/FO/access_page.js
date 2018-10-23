@@ -15,8 +15,13 @@ module.exports = {
     sitemap: '//*[@id="link-static-page-sitemap-2"]',
     page_link: '//*[@id="main"]//a[@title="%pageName"]',
     page_content: '//*[@id="content"]/p',
-    address_information_link: '//*[@id="addresses-link"]',
+    address_information_link: '//*[@id="address-link"]',
+    add_address_button: '//*[@id="addresses-link"]/span[@class="link-item"]',
+
+
     address_information: '//*[@id="address-%ID"]//address',
+
+
     addresses_warning: '//*[@id="notifications"]//li',
     identity_link: '//*[@id="identity-link"]',
     create_account_button: '//*[@id="content"]/div[contains(@class,"no-account")]/a',
@@ -47,6 +52,7 @@ module.exports = {
     display_top_link_widget:'//*[@id="header"]/div[2]/div/div[1]/div[2]/div[3]/div//p[contains(text(),"%DISPLAYTOP")]',
     second_display_top_link_widget:'//*[@id="header"]/div[2]/div/div[1]/div[2]/div[3]/div/div[2]/p',
     not_found_error_message: '//*[@id="main"]//h1',
-    product_name: '//*[@id="js-product-list"]//h2//a[contains(text(),"%PAGENAME")]'
+    product_name: '//*[@id="js-product-list"]//h2//a[contains(text(),"%PAGENAME")]',
+    account_link:'//*[@id="_desktop_user_info"]//a/span[@class="hidden-sm-down"]',
   }
 };
