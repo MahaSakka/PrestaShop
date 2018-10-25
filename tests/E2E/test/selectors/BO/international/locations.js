@@ -1,0 +1,32 @@
+module.exports = {
+  State: {
+    state_tab: '//*[@id="subtab-AdminStates"]',
+    add_new_state_button: '//*[@id="page-header-desc-state-new_state"]',
+    cancel_state_button: '//*[@id="state_form_cancel_btn"]',
+    save_state_button: '//*[@id="state_form_submit_btn"]',
+    state_text_page: '//*[@id="content"]//h1[@class="page-title"]',
+    name_input: '//*[@id="name"]',
+    iso_code_input: '//*[@id="iso_code"]',
+    country_select: '//*[@id="id_country"]',
+    zone_select: '//*[@id="id_zone"]',
+    status_state: '//*[@id="fieldset_0"]//label[@for=%status]',
+    success_alert_text: '//*[@id="content"]//div[@class="alert alert-success"]',
+    tab_input_name: '//*[@id="table-state"]//input[@name="stateFilter_a!name"]',
+    search_button: '//*[@id="submitFilterButtonstate"]',
+    column_state_table: '//*[@id="table-state"]//td[%ID]',
+    reset_button: '//*[@id="table-state"]//button[@name="submitResetstate"]',
+    state_table_column: '//*[@id="table-state"]//tr[%ID]/td[%W]',
+    sort_button: '//*[@id="table-state"]//a[contains(@href,"stateOrderby=%SORTBY") and contains(@href,"stateOrderway=%SORTWAY")]',
+    enabled_select: '//*[@id="table-state"]//select[@name="stateFilter_a!active"]',
+    state_table: '//*[@id="table-state"]',
+    display_state_button: '//*[@id="form-state"]//div[3]/div[2]//button[@class="btn btn-default dropdown-toggle"]',
+    choose_number_state: '//*[@id="form-state"]//a[@data-list-id="state" and @data-items="%A"]',
+    disabled_enabled_state: '//*[@id="table-state"]//tr[%ID]//a[contains(@class,%class)]',
+    id_input_search: '//*[@id="table-state"]//input[@name="stateFilter_id_state"]',
+    name_input_search: '//*[@id="table-state"]//input[@name="stateFilter_a!name"]',
+    iso_code_input_search: '//*[@id="table-state"]//input[@name="stateFilter_iso_code"]',
+    zone_search: '//*[@id="table-state"]//select[@name="stateFilter_z!id_zone"]',
+    country_search: '//*[@id="table-state"]//select[@name="stateFilter_cl!id_country"]',
+    edit_button: '//*[@id="table-state"]//a[@title="Edit"]'
+  }
+};
