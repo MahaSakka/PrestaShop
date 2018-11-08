@@ -2,6 +2,7 @@ const {Menu} = require('../../selectors/BO/menu.js');
 const {Customer} = require('../../selectors/BO/customers/customer');
 const {accountPage} = require('../../selectors/FO/add_account_page');
 const {productPage} = require('../../selectors/FO/product_page');
+const {AccessPageFO} = require('../../selectors/FO/access_page');
 const {CheckoutOrderPage} = require('../../selectors/FO/order_page');
 const {BO} = require('../../selectors/BO/customers/index');
 
@@ -66,7 +67,7 @@ module.exports = {
           .then(() => client.isVisible(Customer.customer_filter_by_email_input))
           .then(() => client.search(Customer.customer_filter_by_email_input, date_time + customerEmail));
       });
-      test('should click on "Edit" button', () => client.waitForExistAndClick(Customer.edit_button));
+      test('should click on "Edit" button', () => client.waitForExistAndClick(Customer.edit_button.replace("%title","Edit")));
       test('should choose the "Social title" radio', () => client.waitForExistAndClick(Customer.social_title_button));
       test('should set the new "First name" input', () => client.waitAndSetValue(Customer.first_name_input, editCustomerData.first_name));
       test('should set the new "Last name" input', () => client.waitAndSetValue(Customer.last_name_input, editCustomerData.last_name));
@@ -133,5 +134,17 @@ module.exports = {
         .then(() => client.waitForExistAndClick(accountPage.customer_form_continue_button))
         .then(() => client.waitForVisible(accountPage.checkout_step_complete));
     });
-  }
+  },
+
+  createAccountFO: function (client, customerData, languageSymbol = 'fr', description) {
+    let language = languageSymbol === 'fr' ? 'Frensh' : 'English';
+    test('should set the language to "' + language + '"', () => client.changeLanguage(languageSymbol));
+    test('should click on "' + description[0] + '" button', () => client.waitForExistAndClick(AccessPageFO.sign_in_button));
+    test('should click on "' + description[1] + '" button', () => client.waitForExistAndClick(AccessPageFO.create_account_button));
+    test('should set the "' + description[2] + '" input', () => client.waitAndSetValue(accountPage.firstname_input, customerData.first_name));
+    test('should set the "' + description[3] + '" input', () => client.waitAndSetValue(accountPage.lastname_input, customerData.last_name));
+    test('should set the "' + description[4] + '" input', () => client.waitAndSetValue(accountPage.email_input, date_time + customerData.email_address));
+    test('should set the "' + description[5] + '" input', () => client.waitAndSetValue(accountPage.password_input, customerData.password));
+    test('should click on "' + description[6] + '" button', () => client.waitForExistAndClick(accountPage.save_account_button));
+  },
 };

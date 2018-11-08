@@ -25,7 +25,7 @@ class Order extends CommonClient {
       })
       .selectByVisibleText(OrderPage.order_state_select, value)
       .then(() => this.client.getValue(OrderPage.order_state_select))
-      .then((order) => global.order_status = order)
+      .then((order) => global.order_status = order);
   }
 
   downloadDocument(selector) {

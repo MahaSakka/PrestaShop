@@ -17,7 +17,7 @@ class CreateCombinations extends Product {
   getCombinationData(number, pause = 2000) {
     return this.client
       .pause(pause)
-      .waitForExist(AddProductPage.combination_panel.replace('%NUMBER', number), 90000)
+      .waitForVisible(AddProductPage.combination_panel.replace('%NUMBER', number), 90000)
       .then(() => this.client.getAttribute(AddProductPage.combination_panel.replace('%NUMBER', number), 'data'))
       .then((text) => global.combinationId = text);
   }

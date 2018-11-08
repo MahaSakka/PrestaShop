@@ -77,7 +77,7 @@ scenario('Create order in the Back Office', () => {
     }, 'order');
 
     scenario('Print delivery invoice', client => {
-      test('should download the delivery invoice document', () => client.downloadDocument(OrderPage.download_delivery_button));
+      test('should download the delivery invoice document', () => client.downloadDocument(OrderPage.download_delivery_button.replace('%i', 3)));
       test('should check the "delivery invoice file name"', () => client.checkDocument(global.downloadsFolderPath, global.invoiceFileName, global.invoiceFileName));
       test('should check that the "delivery invoice customer" is : Johan DOE', () => client.checkDocument(global.downloadsFolderPath, global.invoiceFileName, 'John DOE'));
       test('should check that the "delivery invoice product information" is : "P1' + global.date_time + ' - Size : M- Color : Beige"', () => client.checkDocument(global.downloadsFolderPath, global.invoiceFileName, "P1" + global.date_time + " - Size : M- Color : Beige"));

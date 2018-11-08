@@ -2,7 +2,7 @@ module.exports = {
   OrderPage: {
     orders_subtab: '#subtab-AdminParentOrders',
     form: '#form-order',
-    view_order_button: '//*[@id="form-order"]//tr[%NUMBER]//div[contains(@class,"pull-right")]//a',
+    view_order_button: '//*[@id="table-order"]//tr[%NUMBER]//div[contains(@class,"pull-right")]//a',
     order_state_select: '//*[@id="id_order_state"]',
     update_status_button: '//*[@id="status"]/form//button[@name="submitState"]',
     order_quantity: '//*[@id="orderProducts"]//tr[%NUMBER]/td[4]',
@@ -17,7 +17,7 @@ module.exports = {
     order_submenu: '//*[@id="subtab-AdminOrders"]/a',
     document_submenu: '//*[@id="tabOrder"]//a[@href="#documents"]',
     download_invoice_button: '(//*[@id="documents_table"]//a[contains(@href, "generateInvoicePDF")])[1]',
-    download_delivery_button: '//*[@id="documents_table"]//tr[3]/td[3]/a',
+    download_delivery_button: '//*[@id="documents_table"]//tr[%i]/td[3]/a',
     product_name: '//*[@id="orderProducts"]//tr[%NUMBER]//span[@class="productName"]',
     total_price: '//*[@id="total_products"]/td[contains(@class,"amount")]',
     shipping_method: '//*[@id="shipping_table"]//tr/td[3]',
@@ -31,8 +31,10 @@ module.exports = {
     stock_product: '//*[@id="orderProducts"]//tr[%NUMBER]/td[5]',
     total_order: '//*[@id="total_order"]/td[@class="amount text-right nowrap"]/strong',
     total_product_price: '//*[@id="orderProducts"]//tr[%NUMBER]/td[6]',
-    first_shopping_cart_checkbox : '//*[@id="table-cart"]//tr[1]//input[@name="cartBox[]"]',
-    first_dropdown_button: '//*[@id="table-cart"]/tbody//tr[1]//button[@data-toggle="dropdown"]'
+    first_shopping_cart_checkbox: '//*[@id="table-cart"]//tr[1]//input[@name="cartBox[]"]',
+    first_dropdown_button: '//*[@id="table-cart"]/tbody//tr[1]//button[@data-toggle="dropdown"]',
+    status_select_order_tab: '//*[@id="table-order"]//select[@name="orderFilter_os!id_order_state"]',
+    view_invoice_button: '//*[@id="content"]//a[@data-selenium-id="view_invoice"]'
   },
 
   CreateOrder: {

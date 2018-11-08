@@ -181,8 +181,8 @@ class CommonClient {
     return this.client.waitAndSelectByValue(selector, value, timeout);
   }
 
-  waitAndSelectByVisibleText(selector, value, timeout = 90000) {
-    return this.client.waitAndSelectByVisibleText(selector, value, timeout);
+  waitAndSelectByVisibleText(selector, value, pause = 0, timeout = 90000) {
+    return this.client.waitAndSelectByVisibleText(selector, value, pause, timeout);
   }
 
   addFile(selector, picture, value = 150) {
@@ -317,7 +317,7 @@ class CommonClient {
    */
   checkDocument(folderPath, fileName, text) {
     pdfUtil.pdfToText(folderPath + fileName + '.pdf', function (err, data) {
-      global.indexText = data.indexOf(text)
+      global.indexText = data.indexOf(text);
     });
 
     return this.client
@@ -332,7 +332,7 @@ class CommonClient {
    * @returns {*}
    */
   checkFile(folderPath, fileName, pause = 0) {
-    fs.stat(folderPath + fileName, function(err, stats) {
+    fs.stat(folderPath + fileName, function (err, stats) {
       err === null && stats.isFile() ? global.existingFile = true : global.existingFile = false;
     });
 
@@ -590,6 +590,16 @@ class CommonClient {
       return this.client
         .middleClick(selector)
     }
+  }
+
+  selectTwoByValue(querySelectorElement, selector, globalInVar, value) {
+    return this.client
+      .execute(function (querySelectorElement) {
+        document.querySelector(querySelectorElement).style = ""
+      }, querySelectorElement)
+      .selectByVisibleText(selector, value)
+      .then(() => this.client.getValue(selector))
+      .then((value) => global.tab[globalInVar] = value)
   }
 
 }

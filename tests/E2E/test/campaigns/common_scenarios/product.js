@@ -95,7 +95,11 @@ module.exports = {
               }
             }
           });
-          test('should click on "Generate" button', () => client.scrollWaitForExistAndClick(AddProductPage.variations_generate));
+          test('should click on "Generate" button', () => {
+            return promise
+              .then(() => client.scrollWaitForExistAndClick(AddProductPage.variations_generate))
+              .then(() => client.getCombinationData(1));
+          });
           test('should verify the appearance of the green validation', () => client.checkTextValue(AddProductPage.validation_msg, 'Settings updated.'));
           test('should get the combination data', () => client.getCombinationData(1));
           test('should select all the generated variations', () => client.waitForVisibleAndClick(AddProductPage.var_selected));

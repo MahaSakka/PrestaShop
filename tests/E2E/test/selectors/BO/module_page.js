@@ -51,9 +51,10 @@ module.exports = {
     enable_module: '//form[contains(@action, "action/enable/%moduleTechName")]//button[@data-confirm_modal="module-modal-confirm-%moduleTechName-enable"]',
     reset_module: '//form[contains(@action, "action/reset/%moduleTechName")]//button[@data-confirm_modal="module-modal-confirm-%moduleTechName-reset"]',
     reset_button_modal: '//*[@id="module-modal-confirm-%moduleTechName-reset"]//a[contains(@class, "module_action_modal_reset")]',
-    backdrop_modale:'//div[contains(@class, "fade show")]',
+    backdrop_modale: '//div[contains(@class, "fade show")]',
     installed_module_div: '//div[@data-tech-name="%moduleTechName"]',
     module_action_href: '(//div[@data-tech-name="%moduleTechName"]//div[contains(@class,"module-actions")]/a) |  (//div[@data-tech-name="%moduleTechName"]//form/button[@data-confirm_modal="module-modal-confirm-%moduleTechName-enable"])',
+    module_label: '//*[@id="fieldset_0"]//label[contains(text(),"%txt")]',
     //List of modules after search
     list_module: '//*[@id="modules-list-container-all"]/div[%I]',
     modules_number: '[class="module-sorting-search-wording"]',
@@ -72,7 +73,7 @@ module.exports = {
     MainMenuPage: {
       available_item_list: '//*[@id="availableItems"]//option[@value="CAT%ID"]',
       add_item_button: '//*[@id="addItem"]',
-      selected_item_list : '//*[@id="items"]//option[@value="CAT%ID"]',
+      selected_item_list: '//*[@id="items"]//option[@value="CAT%ID"]',
       save_button: '//*[@id="module_form_submit_btn"]'
     },
     ReadMoreModal: {
@@ -84,7 +85,6 @@ module.exports = {
       module_readmore_tabs: '//*[@id="modules-list-container-all"]/div[contains(@data-tech-name, "%moduleTechName")]//a[contains(text(), "%NAME")]',
       close_modal_button: '//*[@id="module-modal-read-more-%moduleTechName"]//button[@class="close"]'
     },
-
     //Module name in "addons.prestashop.com" after clicking on "Dicover" button
     module_name: '//*[@id="product_content"]/div[@class="product_head"]//h1',
     ContactFormPage: {

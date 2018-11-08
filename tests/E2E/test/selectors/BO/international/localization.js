@@ -28,7 +28,8 @@ module.exports = {
       edit_button: '//*[@id="table-lang"]/tbody//a[@title="Edit"]',
       dropdown_button: '//*[@id="table-lang"]/tbody//button[@data-toggle="dropdown"]',
       delete_button: '//*[@id="table-lang"]/tbody//a[@title="Delete"]',
-      reset_button: '//*[@id="table-lang"]//button[contains(@name, "Reset")]'
+      reset_button: '//*[@id="table-lang"]//button[contains(@name, "Reset")]',
+      table_lang_col: '//*[@id="table-lang"]//td[contains(text(),"%txt")]'
     }
   }
 };

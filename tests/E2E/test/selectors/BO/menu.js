@@ -2,13 +2,14 @@ module.exports = {
   Menu: {
     dashboard_menu: '//*[@id="tab-AdminDashboard"]/a',
     Sell: {
+      sell_menu_group_label: '//*[@id="tab-SELL"]//span[text() = "%txt"]',
       Orders: {
         orders_menu: '//*[@id="subtab-AdminParentOrders"]/a',
         orders_submenu: '#subtab-AdminOrders',
         invoices_submenu: '#subtab-AdminInvoices',
         credit_slips_submenu: '#subtab-AdminSlip',
         delivery_slips_submenu: '#subtab-AdminDeliverySlip',
-        shopping_carts_submenu: '#subtab-AdminCarts'
+        shopping_carts_submenu: '#subtab-AdminCarts',
       },
       Catalog: {
         catalog_menu: '//*[@id="subtab-AdminCatalog"]/a',
@@ -24,7 +25,8 @@ module.exports = {
         catalog_price_rules_tab: '#subtab-AdminSpecificPriceRule',
         stocks_submenu: '#subtab-AdminStockManagement',
         stock_tab: '//*[@id="head_tabs"]//a[text()="Stock"]',
-        movement_tab: '//*[@id="head_tabs"]//a[text()="Movements"]'
+        movement_tab: '//*[@id="head_tabs"]//a[text()="Movements"]',
+        catalog_menu_label: '//*[@id="subtab-AdminCatalog"]//span[contains(text(),"%txt")]'
       },
       Customers: {
         customers_menu: '//*[@id="subtab-AdminParentCustomer"]/a',
